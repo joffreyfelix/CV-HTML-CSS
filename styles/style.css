@@ -1,0 +1,246 @@
+/* Import des polices */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* Raleway Regular */
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 400; /* Normal */
+}
+
+/* Raleway Bold */
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 700; /* Gras */
+}
+
+/* Raleway Italic */
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Italic-VariableFont_wght.ttf") format("ttf");
+  font-style: italic;
+  font-weight: 400; /* Normal */
+}
+
+/* Styles généraux */
+body {
+  width: 1160px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+/* Typographie */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700; /* Gras */
+}
+
+/* Header */
+header {
+  align-items: center;
+  background-color: #782221;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+  width: 1160px;
+}
+
+header img {
+  /* Photo de profil */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  width: 100px;
+}
+
+header h1,
+header h2 {
+  margin: 5px 0;
+}
+
+/* Sous-header */
+.sous-header {
+  align-items: center;
+  background-color: #2c1d27;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  width: 1160px;
+}
+
+.sous-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.sous-header p {
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center; /* Centre le texte à l'intérieur de chaque élément */
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  width: 1160px;
+}
+
+/* Aside */
+aside {
+  align-items: flex-start;
+  background-color: #782221;
+  border-right: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  order: -1;
+  padding: 20px;
+  width: 383px;
+}
+
+aside h3 {
+  color: #000000;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.a-propos {
+  margin-top: 0;
+}
+
+aside ul {
+  padding-left: 20px;
+}
+
+aside li {
+  color: white;
+  margin-bottom: 5px;
+}
+
+aside section p {
+  color: white;
+  text-indent: 20px;
+}
+
+/* Main */
+main {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  padding: 20px;
+}
+
+main h3 {
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+main h4 {
+  margin-bottom: 5px;
+}
+
+main p {
+  margin: 5px 0;
+}
+
+main ul {
+  padding-left: 40px;
+}
+
+.experience,
+.formation {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  align-items: center;
+  background-color: #782221;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 1160px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: white;
+  margin: 15px 10px 5px 10px;
+  text-decoration: none;
+}
+
+footer img {
+  height: 28px;
+  width: 28px;
+  margin: 0 5px;
+}
+
+.updated {
+  order: 1; 
+  width: 100%;
+}
+
+/* Highlight */
+.highlight-aside {
+  background-color: #dbc2a4;
+  width: 383px;
+}
+
+.highlight-main {
+  background-color: #dbc2a4;
+  width: 100%;
+}
+
+/* Effets dynamiques */
+/* Effet 1 : Trait bordeaux au survol des expériences, formations et compétences */
+.experience:hover,
+.formation:hover,
+main ul li:hover {
+  border-right: 5px solid #782221;
+  transition: border-right 0.3s ease;
+}
+
+/* Effet 2 : Zoom sur la photo de profil*/
+header img {
+  cursor: zoom-in;
+}
+
+/* Effet 3 : Opacité réduite au survol des icônes de réseaux sociaux */
+footer a:hover img {
+  opacity: 0.7; /* Réduction de l'opacité à 70% */
+  transition: opacity 0.3s ease; /* Transition douce */
+}
+
+/* Effet 4 : Soulignement des liens au survol */
+a:hover {
+  text-decoration: underline; /* Ajout du soulignement */
+}
